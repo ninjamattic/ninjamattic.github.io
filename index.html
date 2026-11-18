@@ -22,19 +22,31 @@ h1{margin:0;font-size:2.4rem;font-weight:800;letter-spacing:-.03em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
 .links a{color:var(--txt);text-decoration:none;font-weight:500;font-size:15px;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);transition:.2s}
 .links a:hover,.links a:focus-visible{border-color:var(--acc);background:#F3702118;transform:translateY(-2px);outline:none}
+.links a.brand{display:inline-flex;align-items:center;gap:8px}
+.pillicon{width:20px;height:20px;border-radius:22.37%;object-fit:cover;flex:none;display:block}
 .card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px;margin:18px 0;backdrop-filter:blur(12px);box-shadow:0 10px 40px rgba(0,0,0,.35);animation:up .6s ease both}
 .card:nth-of-type(2){animation-delay:.1s}.card:nth-of-type(3){animation-delay:.2s}.card:nth-of-type(4){animation-delay:.3s}
 h2{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 10px}
 .card p{margin:0;color:#c9d0db}.card h2+p{color:var(--mut);font-size:14px}
-a.c{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit;padding:14px 16px;margin-top:10px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);transition:.15s}
+a.c,div.c{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit;padding:14px 16px;margin-top:10px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);transition:.15s}
 a.c:hover,a.c:focus-visible{border-color:var(--acc);transform:translateY(-1px);outline:none}
-a.c.hi{background:linear-gradient(135deg,#2a160a,rgba(255,255,255,.03));border-color:#6a3412}
+a.c.hi{background:linear-gradient(145deg,rgba(12,74,110,.62),rgba(255,255,255,.03) 46%,rgba(255,102,0,.16));border-color:rgba(12,74,110,.95)}
+a.c.hi:hover,a.c.hi:focus-visible{border-color:#FF6600}
+.appicon{width:48px;height:48px;border-radius:22.37%;object-fit:cover;flex:none;display:block}
+.kicker{color:#FF6600;font-size:13px;font-weight:600;line-height:1.35;margin-top:1px}
+div.c.store{flex-wrap:wrap;row-gap:14px}
+.storecopy{flex:1 1 220px;min-width:0}
+.stores{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-left:auto}
+.stores a{display:block;line-height:0;border-radius:4px}
+.stores a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.storebadge{height:40px;width:calc(40px * 119.66407 / 40);flex:none;display:block}
+.playbadge{height:40px;width:calc(40px * 238.96 / 70.87);flex:none;display:block}
 .i{font-size:26px;width:36px;text-align:center;flex:none}
 .t{font-weight:600}.d{color:var(--mut);font-size:14px}.ar{margin-left:auto;color:var(--acc)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 .chips span{font-size:14px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#d5dbe5}
 footer{text-align:center;color:var(--mut);font-size:13px;margin-top:28px}
-@media(max-width:480px){h1{font-size:2rem}main{padding-top:44px}}
+@media(max-width:480px){h1{font-size:2rem}main{padding-top:44px}.stores{margin-left:0;width:100%}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -47,7 +59,7 @@ footer{text-align:center;color:var(--mut);font-size:13px;margin-top:28px}
   <p class="tag">Husband · Father · Pastor · FSD enthusiast · Builder of Churchism</p>
   <div class="links">
     <a href="https://x.com/ninjamattic">𝕏 @ninjamattic</a>
-    <a href="https://churchism.app">⛪ Churchism</a>
+    <a class="brand" href="https://churchism.app"><img class="pillicon" src="assets/apple-touch-icon.png" width="20" height="20" alt="">Churchism</a>
     <a href="https://tesla.com/get-app/referral?code=matt181810">⚡ Free month of FSD</a>
   </div>
 </header>
@@ -59,8 +71,8 @@ footer{text-align:center;color:var(--mut);font-size:13px;margin-top:28px}
 
 <section class="card">
   <h2>What I'm building</h2>
-  <a class="c hi" href="https://churchism.app"><span class="i">⛪</span><span><div class="t">Churchism</div><div class="d">Run the week from one place. Serving, people, kids check-in, giving, calendar, Sunday reports &amp; Music Stand. One workspace, one login.</div></span><span class="ar">→</span></a>
-  <a class="c" href="https://apps.apple.com/us/app/churchism/id6816181194"><span class="i">📱</span><span><div class="t">Churchism for iPhone &amp; iPad</div><div class="d">Same login as the web. Download on the App Store.</div></span><span class="ar">→</span></a>
+  <a class="c hi" href="https://churchism.app"><img class="appicon" src="assets/apple-touch-icon.png" width="48" height="48" alt="Churchism app icon"><span><div class="t">Churchism</div><div class="kicker">Church management, simplified.</div><div class="d">Run the week from one place. Serving, people, kids check-in, giving, calendar, Sunday reports &amp; Music Stand. One workspace, one login.</div></span><span class="ar">→</span></a>
+  <div class="c store"><div class="storecopy"><div class="t">Churchism for iPhone, iPad &amp; Android</div><div class="d">Same login as the web.</div></div><div class="stores"><a href="https://apps.apple.com/us/app/churchism/id6816181194"><img class="storebadge" src="assets/download-on-app-store-white.svg" width="119.66407" height="40" alt="Download on the App Store"></a><a href="https://play.google.com/store/apps/details?id=org.tpchollister.churchismapp"><img class="playbadge" src="assets/get-it-on-google-play.svg" width="238.96" height="70.87" alt="Get it on Google Play"></a></div></div>
 </section>
 
 <section class="card">
